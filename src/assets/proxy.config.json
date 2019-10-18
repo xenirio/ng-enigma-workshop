@@ -1,5 +1,5 @@
 {
     "api": {
-        "url": "https://apienigma.azurewebsites.net"
+        "url": "http://localhost:5000"
     }
 }
