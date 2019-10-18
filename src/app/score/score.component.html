@@ -1,0 +1,55 @@
+<app-header [title]="'Player Score'"></app-header>
+<div class="container text-light mt-3">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h3>
+                <fa-icon [icon]="faStopwatch" size="lg"></fa-icon>
+            </h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <span class="h4">Time</span>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center mt-2">
+            <span class="h3">{{ time }}</span>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center">
+            <h3>
+                <fa-icon [icon]="faShoePrints" size="lg"></fa-icon>
+            </h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <span class="h4">Steps</span>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center mt-2">
+            <span class="h3">{{ steps }}</span>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col text-center h3">
+            <fa-icon *ngFor="let star of stars" class="ml-2 mr-2" [icon]="fasStar" size="lg"></fa-icon>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col text-center mt-2">
+            <span class="h4">{{ compliment }}</span>
+        </div>
+    </div>
+</div>
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <button type="button" class="btn btn-success btn-lg btn-block" (click)="onSubmit()">
+        Submit Score
+    </button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onContinue()">
+        Next Mission
+    </button>
+</nav>

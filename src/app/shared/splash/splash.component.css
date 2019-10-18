@@ -1,0 +1,66 @@
+.splash-background {
+    opacity: 0.65;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 10000;
+    transition: all 0.3s ease 0s;
+}
+
+.splash-wrapper {
+    opacity: 1;
+    position: fixed;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10001;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    display: block;
+}
+
+.invisible {
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.mission-splash {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    z-index: 10001;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    display: inline-block;
+    outline: none;
+    transition: all 0.3s ease 0s;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+}
+
+.mission-splash h3 {
+    text-align: center;
+    color: #fff;
+}
+
+.well.mission-splash {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-close-overlay {
+    font-size: 26px;
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 4px;
+}

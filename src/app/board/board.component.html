@@ -1,0 +1,13 @@
+<app-splash [title]="cover" [symbol]="symbol" [visible]="steps.length === 0 && cover != ''"></app-splash>
+<app-header [title]="'Mission ' + mission.major + '-' + mission.minor"></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngFor="let rotor of rotors; let i = index;" class="position-fixed" [style.top.px]="positions[i].y"
+                [style.left.px]="positions[i].x">
+                <app-rotor [rotor]="rotor" (outDial)="onDial($event)"></app-rotor>
+            </div>
+        </div>
+    </div>
+</div>
+<app-control [started]="started" [steps]="steps.length" (outReset)="onReset()"></app-control>

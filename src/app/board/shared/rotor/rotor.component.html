@@ -1,0 +1,8 @@
+<div class="rotor vector" [ngClass]="{'success': rotor.isUnlock}">
+  <div class="knop">
+    <div class="ticker" [style.transform]="'rotate(' + degree + 'deg)'">
+      <div class="tick"></div>
+    </div>
+  </div>
+  <div *ngFor="let point of points;" class="tick-point" [style.left.px]="point.left" [style.top.px]="point.top"></div>
+</div>

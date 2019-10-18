@@ -1,0 +1,25 @@
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+  <ul class="navbar-nav col-4">
+    <li class="nav-item navbar-text text-center">
+      <fa-icon [icon]="faStopwatch" size="lg"></fa-icon>
+    </li>
+    <li class="nav-item navbar-text text-center">
+      <span>{{time | date:'mm:ss'}}</span>
+    </li>
+  </ul>
+  <ul class="navbar-nav col-4">
+    <li class="nav-item text-center">
+      <button type="button" class="btn btn-primary btn-lg rounded-circle" (click)="onReset()">
+        <fa-icon [icon]="faUndoAlt" size="lg"></fa-icon>
+      </button>
+    </li>
+  </ul>
+  <ul class="navbar-nav col-4">
+    <li class="nav-item navbar-text text-center">
+      <fa-icon [icon]="faShoePrints" size="lg"></fa-icon>
+    </li>
+    <li class="nav-item navbar-text text-center">
+      <span>{{steps}}</span>
+    </li>
+  </ul>
+</nav>

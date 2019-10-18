@@ -1,0 +1,10 @@
+.btn-lg.rounded-circle
+{
+    width: 5rem;
+    height: 5rem;
+}
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
