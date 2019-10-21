@@ -1,5 +1,5 @@
 <div class="rotor vector" [ngClass]="{'success': rotor.isUnlock}">
-  <div class="knop">
+  <div class="knop" (click)="dial()">
     <div class="ticker" [style.transform]="'rotate(' + degree + 'deg)'">
       <div class="tick"></div>
     </div>

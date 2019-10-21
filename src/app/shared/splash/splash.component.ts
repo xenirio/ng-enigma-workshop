@@ -35,7 +35,10 @@ export class SplashComponent implements OnInit {
   }
 
   get visibility() {
-    throw new Error('NotImplementedException');
+    if(this._visible === true)
+      return "visible";
+    else
+      return "invisible";
   }
 
   constructor() { }

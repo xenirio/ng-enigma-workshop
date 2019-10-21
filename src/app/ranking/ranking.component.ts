@@ -16,7 +16,7 @@ export class RankingComponent implements OnInit {
   faTrophy = faTrophy
 
   get scores(): Score[] {
-    return Object.keys(this._scores).map(k => { return this._scores[k]; });
+    return Object.keys(this._scores).map(k => { return this._scores[k]; }).sort((a, b) => b.score - a.score );
   }
   get ranking(): number {
     return this.scores.findIndex(s => s.player === localStorage.getItem("player")) + 1;
@@ -24,9 +24,15 @@ export class RankingComponent implements OnInit {
 
   constructor(
     private _missionScoreService: MissionScoreService,
+    private _scoreService: ScoreService,
     private _router: Router) { }
 
   ngOnInit() {
+    this._scoreService.get.score.list().subscribe(scores => {
+      scores.forEach(score => {
+        this._scores[score.player] = score;
+      });
+    });
   }
 
   onContinue() {

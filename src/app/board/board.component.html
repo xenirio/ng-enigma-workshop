@@ -1,4 +1,6 @@
 <app-splash [title]="cover" [symbol]="symbol" [visible]="steps.length === 0 && cover != ''"></app-splash>
+<app-splash [title]="'Nice'" [symbol]="1" [visible]="unlocked && steps.length > mission.answer"></app-splash>   
+<app-splash [title]="'Excellent!'" [symbol]="2" [visible]="unlocked && steps.length <= mission.answer"></app-splash> 
 <app-header [title]="'Mission ' + mission.major + '-' + mission.minor"></app-header>
 <div class="container">
     <div class="row">

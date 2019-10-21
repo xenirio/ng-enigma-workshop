@@ -41,6 +41,6 @@ export class RotorComponent implements OnInit {
   }
 
   dial() {
-    throw new Error('NotImplementedException');
+    this.outDial.emit(this.rotor.id);
   }
 }
